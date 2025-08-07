@@ -38,3 +38,7 @@ GOPROXY=direct go get github.com/reiver/go-pymtptr
 ## Author
 
 Package **pymtptr** was written by [Charles Iliya Krempeaux](http://reiver.link)
+
+## See Also
+
+* https://github.com/reiver/go-spsp
