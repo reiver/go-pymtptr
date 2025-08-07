@@ -14,7 +14,7 @@ type PaymentPointer struct {
 	Path string
 }
 
-// Parse parses a Payment-Pointer, and if valid, extras the host and path
+// Parse parses a Payment-Pointer, and if valid, extracts the host and path
 // from the Payment-Pointer and loads it into the receiver.
 func (receiver *PaymentPointer) Parse(value string) error {
 	if nil == receiver {
