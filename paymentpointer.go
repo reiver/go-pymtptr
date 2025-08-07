@@ -2,6 +2,7 @@ package pymtptr
 
 import (
 	"net/url"
+	"strings"
 
 	"golang.org/x/net/idna"
 )
@@ -11,6 +12,41 @@ import (
 type PaymentPointer struct {
 	Host string
 	Path string
+}
+
+// Parse parses a Payment-Pointer, and if valid, extras the host and path
+// from the Payment-Pointer and loads it into the receiver.
+func (receiver *PaymentPointer) Parse(value string) error {
+	if nil == receiver {
+		return errNilReceiver
+	}
+
+	if "" == value {
+		return errEmptyString
+	}
+
+	if '$' != value[0] {
+		return errDollarSignPrefixNotFound
+	}
+	str := value[1:]
+
+	var host string
+	var path string
+	{
+//@TODO: should this validate the host and path according to IETF RFC-3986 (Uniform Resource Identifier (URI): Generic Syntax)
+		var index int = strings.Index(str, "/")
+
+		if index < 0 {
+			host = str
+		} else {
+			host = str[:index]
+			path = str[index:]
+		}
+	}
+
+	receiver.Host = host
+	receiver.Path = path
+	return nil
 }
 
 // Pretty returns the "pretty" version of a payment-pointer.
