@@ -2,7 +2,7 @@
 
 Package **pymtptr** implements an **Payment Pointers**, for the Go programming language.
 
-**Payment Pointers** are used by the **Interledger Protocol** and [Open Payments](https://openpayments.dev/).
+**Payment Pointers** are used by the **Interledger Protocol**, [Open Payments](https://openpayments.dev/), [Web Monetization](https://webmonetization.org/).
 
 ## Documention
 
