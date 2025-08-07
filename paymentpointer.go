@@ -105,7 +105,7 @@ func (receiver PaymentPointer) Pretty() string {
 	return string(p)
 }
 
-// Resolve resolves a [PaymentPointer] to an HTTPURL.
+// Resolve resolves a [PaymentPointer] to an HTTP URL.
 //
 // If the [PaymentPointer] receiver is NOT a valid the Resolve returns an empty string.
 func (receiver PaymentPointer) Resolve() string {
