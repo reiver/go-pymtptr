@@ -105,6 +105,40 @@ func (receiver PaymentPointer) Pretty() string {
 	return string(p)
 }
 
+// Resolve resolves a [PaymentPointer] to an HTTPURL.
+//
+// If the [PaymentPointer] receiver is NOT a valid the Resolve returns an empty string.
+func (receiver PaymentPointer) Resolve() string {
+	if "" == receiver.Host {
+		return ""
+	}
+
+	var host string
+	{
+		var err error
+
+		host, err = idna.ToASCII(receiver.Host)
+		if nil != err {
+			host = receiver.Host
+		}
+
+		host = canonicalHost(host)
+	}
+
+	var path string = "/.well-known/pay"
+	if "" !=  receiver.Path {
+		path = receiver.Path
+	}
+
+	var u = url.URL{
+		Scheme: "https",
+		Host: host,
+		Path: path,
+	}
+
+	return u.String()
+}
+
 // String returns the payment-pointer.
 //
 // An example payment-pointer looks like these:
