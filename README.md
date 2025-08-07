@@ -10,6 +10,11 @@ Package **pymtptr** implements an **Payment Pointers**, for the Go programming l
 * `$joeblow.example.com`
 * `$example.com/janedoe`
 
+Information about **Payment Pointers** can be found here:
+
+* https://paymentpointers.org/
+* https://paymentpointers.org/syntax/
+
 ## Documention
 
 Online documentation, which includes examples, can be found at: http://godoc.org/github.com/reiver/go-pymtptr
