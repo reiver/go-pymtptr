@@ -19,7 +19,7 @@ package pymtptr
 //
 // A path with non-ASCII character is encoded into ASCII using
 // urlencode.
-func Join(host string, path string) string {
+func Join(host string, path string) (paymentPointer string) {
 	if "" == host {
 		return ""
 	}
