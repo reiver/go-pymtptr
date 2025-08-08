@@ -204,7 +204,7 @@ func (receiver PaymentPointer) String() string {
 		}
 	}
 
-	if "" != receiver.Path {
+	if "" != receiver.Path && "/.well-known/pay" != receiver.Path {
 		if '/' != receiver.Path[0] {
 			p = append(p, '/')
 		}

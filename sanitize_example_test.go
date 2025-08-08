@@ -53,3 +53,15 @@ func ExampleSanitize_upperCaseHost() {
 	// Output:
 	// $xn--hello-world-lk27j.com
 }
+
+func ExampleSanitize_wellKnown() {
+
+	var paymentPointer string = "$example.com/.well-known/pay"
+
+	sanitized := pymtptr.Sanitize(paymentPointer)
+
+	fmt.Println(sanitized)
+
+	// Output:
+	// $example.com
+}
