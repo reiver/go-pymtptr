@@ -92,7 +92,7 @@ func ExampleSplit_idnaHost() {
 	fmt.Printf("PATH: %q\n", path)
 
 	// Output:
-	// HOST: "xn--m28h.com"
+	// HOST: "😈.com"
 	// PATH: ""
 }
 

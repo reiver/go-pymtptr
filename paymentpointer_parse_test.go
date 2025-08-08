@@ -56,8 +56,8 @@ func TestPaymentPointer_Parse(t *testing.T) {
 
 		{
 			Value:       "$xn--938h.com/%DB%B1/%DB%B2/%DB%B3/%DB%B4/%DB%B5",
-			ExpectedHost: "xn--938h.com",
-			ExpectedPath:             "/%DB%B1/%DB%B2/%DB%B3/%DB%B4/%DB%B5",
+			ExpectedHost: "🙂.com",
+			ExpectedPath:             "/۱/۲/۳/۴/۵",
 		},
 	}
 

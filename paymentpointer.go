@@ -16,6 +16,10 @@ type PaymentPointer struct {
 
 // Parse parses a Payment-Pointer, and if valid, extracts the host and path
 // from the Payment-Pointer and loads it into the receiver.
+//
+// Host is NOT punycode encoded, but instead can contain non-ASCII Unicode characters.
+//
+// Path is NOT urlencoded, but instead can contain non-ASCII Unicode characters.
 func (receiver *PaymentPointer) Parse(value string) error {
 	if nil == receiver {
 		return errNilReceiver
@@ -42,6 +46,19 @@ func (receiver *PaymentPointer) Parse(value string) error {
 			host = str[:index]
 			path = str[index:]
 		}
+	}
+	if "" != host {
+		h, err := idna.ToUnicode(host)
+		if nil == err {
+			host = h
+		}
+	}
+	if "" != path {
+		p, err := url.PathUnescape(path)
+		if nil == err {
+			path = p
+		}
+
 	}
 
 	receiver.Host = host

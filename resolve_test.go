@@ -63,11 +63,11 @@ func TestResolve(t *testing.T) {
 
 		{
 			Value:           "$example.com/%DB%B1/%DB%B2/%DB%B3/%DB%B4/%DB%B5",
-			Expected: "https://example.com/%25DB%25B1/%25DB%25B2/%25DB%25B3/%25DB%25B4/%25DB%25B5",
+			Expected: "https://example.com/%DB%B1/%DB%B2/%DB%B3/%DB%B4/%DB%B5",
 		},
 		{
 			Value:           "$EXAMPLE.COM/%DB%B1/%DB%B2/%DB%B3/%DB%B4/%DB%B5",
-			Expected: "https://example.com/%25DB%25B1/%25DB%25B2/%25DB%25B3/%25DB%25B4/%25DB%25B5",
+			Expected: "https://example.com/%DB%B1/%DB%B2/%DB%B3/%DB%B4/%DB%B5",
 		},
 
 

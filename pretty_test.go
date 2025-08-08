@@ -63,11 +63,11 @@ func TestPretty(t *testing.T) {
 
 		{
 			Value:    "$example.com/%DB%B1/%DB%B2/%DB%B3/%DB%B4/%DB%B5",
-			Expected: "$example.com/%DB%B1/%DB%B2/%DB%B3/%DB%B4/%DB%B5",
+			Expected: "$example.com/۱/۲/۳/۴/۵",
 		},
 		{
 			Value:    "$EXAMPLE.COM/%DB%B1/%DB%B2/%DB%B3/%DB%B4/%DB%B5",
-			Expected: "$example.com/%DB%B1/%DB%B2/%DB%B3/%DB%B4/%DB%B5",
+			Expected: "$example.com/۱/۲/۳/۴/۵",
 		},
 
 

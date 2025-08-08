@@ -102,7 +102,7 @@ func ExamplePaymentPointer_Parse_idnaHost() {
 	fmt.Printf("PATH: %q\n", paymentPointer.Path)
 
 	// Output:
-	// HOST: "xn--m28h.com"
+	// HOST: "😈.com"
 	// PATH: ""
 }
 
