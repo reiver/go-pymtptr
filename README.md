@@ -1,6 +1,6 @@
 # go-pymtptr
 
-Package **pymtptr** implements an **Payment Pointers**, for the Go programming language.
+Package **pymtptr** implements **Payment Pointers**, for the Go programming language.
 
 **Payment Pointers** look like these:
 
