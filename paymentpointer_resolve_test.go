@@ -31,6 +31,19 @@ func TestPaymentPointer_Resolve(t *testing.T) {
 
 		{
 			Host:             "example.com",
+			Path:                         "/",
+			Expected: "https://example.com/.well-known/pay",
+		},
+		{
+			Host:             "EXAMPLE.COM",
+			Path:                         "/",
+			Expected: "https://example.com/.well-known/pay",
+		},
+
+
+
+		{
+			Host:             "example.com",
 			Path:                         "Path",
 			Expected: "https://example.com/Path",
 		},

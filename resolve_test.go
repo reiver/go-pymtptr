@@ -29,6 +29,17 @@ func TestResolve(t *testing.T) {
 
 
 		{
+			Value:           "$example.com/",
+			Expected: "https://example.com/.well-known/pay",
+		},
+		{
+			Value:           "$EXAMPLE.COM/",
+			Expected: "https://example.com/.well-known/pay",
+		},
+
+
+
+		{
 			Value:           "$example.com/Path",
 			Expected: "https://example.com/Path",
 		},

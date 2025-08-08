@@ -143,7 +143,7 @@ func (receiver PaymentPointer) Resolve() string {
 	}
 
 	var path string = "/.well-known/pay"
-	if "" !=  receiver.Path {
+	if "" != receiver.Path && "/" != receiver.Path {
 		path = receiver.Path
 	}
 
