@@ -41,4 +41,5 @@ Package **pymtptr** was written by [Charles Iliya Krempeaux](http://reiver.link)
 
 ## See Also
 
+* https://github.com/reiver/go-ilpaddr
 * https://github.com/reiver/go-spsp
