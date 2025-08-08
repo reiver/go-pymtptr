@@ -2,8 +2,6 @@
 
 Package **pymtptr** implements an **Payment Pointers**, for the Go programming language.
 
-**Payment Pointers** are used by the **Interledger Protocol**, [Open Payments](https://openpayments.dev/), [Web Monetization](https://webmonetization.org/).
-
 **Payment Pointers** look like these:
 
 * `$example.com`
@@ -14,6 +12,8 @@ Information about **Payment Pointers** can be found here:
 
 * https://paymentpointers.org/
 * https://paymentpointers.org/syntax/
+
+**Payment Pointers** are used by the [Interledger Protocol](https://interledger.org/), [Open Payments](https://openpayments.dev/), [Web Monetization](https://webmonetization.org/).
 
 ## Documention
 
